@@ -22,7 +22,6 @@ loja-cafe-html/
 ├── html/    (páginas .html)
 ├── img/     (fachada-loja.jpg, cafe-especial.jpg)
 ├── audio/   (boas-vindas.mp3)
-└── video/   (reservada para vídeos)
 ```
 
 ## Requisitos atendidos

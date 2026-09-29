@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="content-language" content="pt-br" />
+  <meta name="author" content="SEU NOME AQUI" />
+  <meta name="keywords" content="café, pedido, formulário, entrega, retirada" />
+  <meta name="description" content="Formulário de pedido da Café & Grãos, com retirada na loja ou entrega." />
+  <title>Café & Grãos - Faça seu Pedido</title>
+</head>
+<body>
+
+  <header>
+    <h1>Faça seu Pedido</h1>
+    <p>Preencha o formulário e receba seu café fresquinho.</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="pedido.html">Faça seu Pedido</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Formulário de pedido</h2>
+
+      <article>
+        <h3>Seus dados e seu pedido</h3>
+        <form method="get">
+
+          <fieldset>
+            <legend>Dados do cliente</legend>
+            <p>
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required />
+            </p>
+            <p>
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" placeholder="exemplo@email.com" required />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Pedido</legend>
+            <p>
+              <label for="produto">Produto:</label>
+              <input type="text" id="produto" name="produto" list="produtos" placeholder="Digite ou escolha um produto" required />
+              <datalist id="produtos">
+                <option value="Café Tradicional 500 g"></option>
+                <option value="Café Especial 250 g"></option>
+                <option value="Kit Presente"></option>
+              </datalist>
+            </p>
+            <p>
+              <label for="quantidade">Quantidade (1 a 10):</label>
+              <input type="range" id="quantidade" name="quantidade" min="1" max="10" />
+            </p>
+            <p>
+              <label for="data">Data de retirada ou entrega:</label>
+              <input type="date" id="data" name="data" required />
+            </p>
+            <p>
+              <label for="comprovante">Anexar comprovante do Pix:</label>
+              <input type="file" id="comprovante" name="comprovante" />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferências</legend>
+            <p>Como deseja receber:</p>
+            <label><input type="radio" name="entrega" value="retirada" checked /> Retirar na loja</label>
+            <label><input type="radio" name="entrega" value="entrega" /> Entrega em casa</label>
+            <p>
+              <label><input type="checkbox" name="moido" value="sim" /> Quero o café moído</label>
+            </p>
+            <p>
+              <label for="obs">Observações:</label><br />
+              <textarea id="obs" name="obs" cols="40" rows="5" placeholder="Alguma observação sobre o pedido?"></textarea>
+            </p>
+          </fieldset>
+
+          <p>
+            <input type="submit" value="Enviar pedido" />
+            <input type="reset" value="Limpar" />
+          </p>
+        </form>
+      </article>
+    </section>
+
+    <section>
+      <h2>Ajuda com o pedido</h2>
+      <details>
+        <summary>Por que alguns campos são obrigatórios?</summary>
+        <p>Os campos com <code>required</code> precisam ser preenchidos. Se ficarem vazios, o navegador avisa antes de enviar.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <aside>
+    <h2>Observação</h2>
+    <p>Este formulário é apenas demonstrativo: sem servidor, os pedidos não são armazenados.</p>
+  </aside>
+
+  <footer>
+    <p>&copy; 2026 Café &amp; Grãos</p>
+  </footer>
+
+</body>
+</html>
